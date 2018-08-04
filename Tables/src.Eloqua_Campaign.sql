@@ -1,0 +1,42 @@
+CREATE TABLE [src].[Eloqua_Campaign]
+(
+[ETL_ID] [int] NOT NULL IDENTITY(1, 1),
+[ETL_CreatedDate] [datetime] NOT NULL CONSTRAINT [DF__Eloqua_Ca__ETL_C__4B973090] DEFAULT (getdate()),
+[ETL_UpdatedDate] [datetime] NOT NULL CONSTRAINT [DF__Eloqua_Ca__ETL_U__4C8B54C9] DEFAULT (getdate()),
+[ETL_IsDeleted] [bit] NOT NULL CONSTRAINT [DF__Eloqua_Ca__ETL_I__4D7F7902] DEFAULT ((0)),
+[ETL_DeletedDate] [datetime] NULL,
+[ETL_DeltaHashKey] [binary] (32) NULL,
+[ID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Name] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ActualCost] [numeric] (38, 6) NULL,
+[BudgetedCost] [numeric] (38, 6) NULL,
+[CampaignType] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CrmId] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[EndAt] [datetime] NULL,
+[EndValues] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[IsMemberAllowedReEntry] [bit] NULL,
+[IsReadOnly] [bit] NULL,
+[Product] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Region] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[StartAt] [datetime] NULL,
+[CreatedAt] [datetime] NULL,
+[CreatedBy] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[AccessedAt] [datetime] NULL,
+[CurrentStatus] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Depth] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UpdatedAt] [datetime] NULL,
+[UpdatedBy] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Permissions] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ScheduledFor] [datetime] NULL,
+[SourceTemplatedId] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FolderId] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Campaign_Type] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Five] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Four] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Three] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Two] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CLREndDate] [date] NULL
+)
+GO
+ALTER TABLE [src].[Eloqua_Campaign] ADD CONSTRAINT [PK__Eloqua_C__7EF6BFCDDAC6C6D9] PRIMARY KEY CLUSTERED  ([ETL_ID])
+GO
